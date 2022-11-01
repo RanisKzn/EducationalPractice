@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище EducationalPracticeBDModelContainer" CdmEntityContainer="EducationalPracticeBDEntities1">
+    <EntitySetMapping Name="Company">
+      <EntityTypeMapping TypeName="EducationalPracticeBDModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="BankRequisites" ColumnName="BankRequisites" />
+          <ScalarProperty Name="SpecializationEnterprise" ColumnName="SpecializationEnterprise" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contract">
+      <EntityTypeMapping TypeName="EducationalPracticeBDModel.Contract">
+        <MappingFragment StoreEntitySet="Contract">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ConclusionDate" ColumnName="ConclusionDate" />
+          <ScalarProperty Name="CotractTerm" ColumnName="CotractTerm" />
+          <ScalarProperty Name="AmountPayments" ColumnName="AmountPayments" />
+          <ScalarProperty Name="InsurancePayments" ColumnName="InsurancePayments" />
+          <ScalarProperty Name="IdInsuranceAgent" ColumnName="IdInsuranceAgent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsuranceAgent">
+      <EntityTypeMapping TypeName="EducationalPracticeBDModel.InsuranceAgent">
+        <MappingFragment StoreEntitySet="InsuranceAgent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="PassportData" ColumnName="PassportData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsuredEmployee">
+      <EntityTypeMapping TypeName="EducationalPracticeBDModel.InsuredEmployee">
+        <MappingFragment StoreEntitySet="InsuredEmployee">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+          <ScalarProperty Name="IdContract" ColumnName="IdContract" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

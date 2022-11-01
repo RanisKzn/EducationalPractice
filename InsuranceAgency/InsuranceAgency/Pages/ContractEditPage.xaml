@@ -1,0 +1,40 @@
+﻿<Page x:Class="InsuranceAgency.Pages.ContractEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InsuranceAgency.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ContractEditPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" x:Name="TBConclusionDate" Text="Начало контракта" FontSize="16"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" x:Name="TBCotractTerm" Text="Конец контракта" FontSize="16"></TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0" x:Name="TBAmountPayments" Text="Выплаты по категориям" FontSize="16"></TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" x:Name="TBInsurancePayments" Text="Страховые выплаты" FontSize="16"></TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="0" x:Name="TBInsuranceAgent" Text="Страховой агент" FontSize="16"></TextBlock>
+
+
+        <TextBox Text="{Binding ConclusionDate}" Grid.Row="0" Grid.Column="1" x:Name="TeBConclusionDate"></TextBox>
+        
+        <TextBox Text="{Binding CotractTerm}" Grid.Row="1" Grid.Column="1" x:Name="TeBCotractTerm"></TextBox>
+        <TextBox Text="{Binding AmountPayments}" Grid.Row="2" Grid.Column="1" x:Name="TeBAmountPayments"></TextBox>
+        <TextBox Text="{Binding InsurancePayments}" Grid.Row="3" Grid.Column="1" x:Name="TeBInsurancePayments"></TextBox>
+        <ComboBox SelectedItem="{Binding InsuranceAgent}" Grid.Row="4" Grid.Column="1" x:Name="CBInsuranceAgent" DisplayMemberPath="FIO"></ComboBox>
+
+        <Button Grid.Row="5" Grid.ColumnSpan="2" Content="Сохранить" x:Name="BtnSave" Click="BtnSave_Click"></Button>
+    </Grid>
+</Page>
